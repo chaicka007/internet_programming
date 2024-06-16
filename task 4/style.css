@@ -1,0 +1,176 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ace9e9;
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container header {
+    font-size: 35px;
+    color: #382828;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container form {
+    margin-top: 30px;
+}
+
+.form label {
+    font-size: 17px;
+}
+
+.form .category {
+    width: 100%;
+    margin-top: 20px;  
+}
+
+.form .input-box {
+    width: 100%;
+    margin-top: 20px;    
+}
+
+.input-box label{
+    color: #333;  
+}
+
+.form .input-box .input {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    margin-top: 8px;
+    border: 2px solid #ddd;
+    border-radius: 28px;
+    padding: 0 15px;
+}
+
+.form .gender-box {
+    margin-top: 20px;
+}
+
+.gender-box {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.form .gender {
+    column-gap: 5px;
+}
+
+.form .gender input {
+    cursor: pointer;
+    accent-color: #2bcfec;    
+}
+
+.form .eye_color {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form .color input {
+    cursor: pointer;
+}
+
+#birth_date {
+    cursor: pointer;
+}
+
+#registration_date {
+    cursor: pointer;
+}
+
+.form .screenshot {
+    margin-top: 15px;
+}
+
+.form .screenshot input {
+    cursor: pointer;
+}
+
+.form .information {
+    margin-top: 15px;
+}
+
+.form .information input {
+    cursor: pointer;
+    accent-color: #c38d9e;      
+}
+
+.form :where(.agreement, .button_agreement) {
+    margin-top: 15px;
+}
+
+.button_agreement input {
+    cursor: pointer;
+    accent-color: #c38d9e;  
+}
+
+.form button {
+    height: 55px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    transform: all 0.2s ease;
+    color: #333;
+}
+
+#button1 {
+    background-color: #41b3a3;
+    transition: 2s;
+}
+
+#button2 {
+    background-color: #e27d60;
+    transition: 2s;
+}
+
+#button1:hover {
+    background-color: #1a6b60;
+}
+
+#button2:hover {
+    background-color: #9e452d;
+}
+
+.required::after {
+    content: "*";
+    color: #f70f0f;
+}
+h3{
+    text-align: center;
+}

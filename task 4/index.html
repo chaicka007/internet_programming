@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрационная форма</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <section class="container">
+        <header>Регистрационная форма</header>    
+        <form class="form" action="check.php" method="post" enctype="multipart/form-data">        
+            <div class="category">
+                <h3>Личная информация</h3>         
+
+                <div class="input-box">
+                    <label class="required">Фамилия: </label>
+                    <input class="input" placeholder="Фамилия" type="text" name="name" required pattern="[А-Яа-яЁё]+" title="Только русские буквы">
+                </div>
+
+                <div class="input-box">
+                    <label class="required">Имя: </label>
+                    <input class="input" placeholder="Имя" type="text" name="firstname" required pattern="[А-Яа-яЁё]+" title="Только русские буквы">
+                </div>
+
+                <div class="input-box">
+                    <label>Отчество: </label>
+                    <input class="input" placeholder="Отчество" type="text" name="middlename" pattern="[А-Яа-яЁё]+" title="Только русские буквы">
+                </div>
+
+                <div>
+                    <div class="gender-box">
+                        <label class="required">Пол: </label>
+                    </div>                    
+                    <div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" name="gender" value="male" required> Мужской
+                        </div>
+                        <div class="gender">
+                            <input type="radio" name="gender" value="female" required> Женский
+                        </div>
+                    </div>                                     
+                </div>
+
+                <div class="input-box">
+                    <div class="eye_color">
+                        <label>Цвет глаз: </label>
+                    </div>
+                    <div class="color">
+                        <input type="color" name="eye_color">
+                    </div>                  
+                </div>
+
+                <div class="input-box">
+                    <label class="required">Дата рождения: </label>
+                    <input id="birth_date" class="input" type="date" name="birth_date" required>
+                </div>
+                
+                <div class="input-box">
+                    <label>Возраст: </label>
+                    <input class="input" placeholder="Возраст" type="number" name="age" min="18" max="100">
+                </div>
+
+                <div class="input-box">
+                    <label class="required">Место рождения: </label>
+                    
+                    <input class="input" placeholder="Город" list="birthplace" name="birthplace" required>
+                    <datalist id="birthplace">
+                        <option value="Саратов">
+                        <option value="Энгельс">
+                        <option value="Самара">
+                        <option value="Волгоград">
+                        <option value="Рязань">
+                        <option value="Москва">
+                        <option value="Санкт-Петербург">
+                        <option value="Новосибирск">
+                        <option value="Екатеринбург">
+                        <option value="Казань">                
+                    </datalist>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>Контактная информация</h3>
+
+                <div class="input-box">
+                    <label class="required">Индекс: </label>
+                    <input class="input" placeholder="123456" type="text" name="postcode" required>
+                </div>
+
+                <div class="input-box">
+                    <label class="required">Домашний адрес: </label>
+                    <input class="input" placeholder="Страна, Город, Улица, Дом №" type="text" name="address" required>
+                </div>
+
+                <div class="input-box">
+                    <label class="required">Дата регистрации: </label>
+                    <input id="registration_date" class="input" type="date" name="registration_date" required>
+                </div>
+
+                <div class="input-box">
+                    <label class="required">Номер телефона: </label>
+                    <input class="input" placeholder="+7-ххх-ххх-хх-хх" type="tel" name="phone" required pattern="\+7-\d{3}-\d{3}-\d{2}-\d{2}" 
+                    placeholder="+7-xxx-xxx-xx-xx" title="Формат телефона: +7-xxx-xxx-xx-xx">
+                </div>
+
+                <div class="input-box">
+                    <label class="required">E-mail: </label>
+                    <input class="input" placeholder="example@example.ru" type="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>Общая информация</h3>
+                
+                <div class="input-box">
+                    <div class="screenshot">
+                        <label class="required">Фото первой страницы Вашего паспорта: </label>
+                    </div>                    
+            
+                    <div class="screenshot">
+                        <input type="file" name="passport" accept=".jpeg" required>
+                    </div>                   
+                </div>
+
+                <div class="input-box">
+                    <label>Откуда узнали о магазине: </label>
+                    <div class="information">
+                        <input type="checkbox" name="social_media" value="yes"> Из социальных сетей
+                    </div>
+                    
+                    <div class="information">
+                        <input type="checkbox" name="friends" value="yes"> От друзей
+                    </div>   
+
+                    <div class="information">
+                        <input type="checkbox" name="advertising" value="yes"> Видел рекламу
+                    </div>   
+
+                    <div class="information">
+                        <input type="checkbox" name="other" value="yes"> Другое
+                    </div>   
+                </div>
+
+                <div class="input-box">
+                    <div class="agreement">
+                        <label class="required">Соглашение: </label> 
+                    </div>
+                    <div class="button_agreement">
+                        <input type="checkbox" name="consent" required> Согласие на обработку и хранение персональных данных
+                    </div>   
+                </div>          
+            </div>
+
+            <div class="category">
+                <div class="button">
+                    <button id="button1" class="input" type="submit">Отправить</button>
+                </div>
+
+                <div class="button">
+                    <button id="button2" class="input" type="reset">Очистить</button>
+                </div>
+            </div>    
+        </form>
+    </section>
+</body>
+</html>
